@@ -1,0 +1,17 @@
+<div class="card">
+	<div class="card__img ibg">
+		<a href="#">
+			<img class="lazy" data-src="@@imgSrc" src="img/card/placeholder.jpg" alt="img">
+		</a>
+	</div>
+	<div class="card__bottom">
+		<div class="card__title text">@@title</div>
+		<span class="card__price">@@price</span>
+		@@if (oldPrice.is === true) {
+	    	<span class="card__old-price">@@oldPrice.price</span>
+	    }
+		<a href="#" class="card__like">
+			<img class="img-svg" src="img/icons/heart.svg" alt="icon">
+		</a>
+	</div>
+</div>

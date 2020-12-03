@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('_head.html',{
+	"title": "Joolie"
+	})
+	<body>
+		<!-- == WRAPPER ================== -->
+		<div class="wrapper home">
+			<!-- == HEADER ================== -->
+			@@include('blocks/header/_header.html',{})
+			<!-- == // HEADER ================== -->
+
+			<!-- == PAGE CONTENT ================== -->
+			<main class="page">
+				@@include('blocks/promo-slider/_promo-slider.html',{})
+
+				@@include('blocks/logos-block/_logos-block.html',{})
+
+				@@include('blocks/products-category/_products-category.html',{})
+				
+				@@include('blocks/populsr-products/_populsr-products.html',{})
+
+				@@include('blocks/text-video-block/_text-video-block.html',{})
+				
+				@@include('blocks/advantages/_advantages.html',{})
+				
+				@@include('blocks/get-your-gift-block/_get-your-gift-block.html',{})
+				
+				@@include('blocks/latest-articles/_latest-articles.html',{})
+				
+				@@include('blocks/testimonials-slider/_testimonials-slider.html',{})
+				
+				@@include('blocks/instagram-block/_instagram-block.html',{})
+
+			</main>
+			<!-- == // PAGE CONTENT ================== -->
+
+			<!-- == FOOTER ================== -->
+			@@include('blocks/footer/_footer.html',{})
+			<!-- == // FOOTER ================== -->
+		</div>
+		<!-- == // WRAPPER ================== -->
+		@@include('blocks/popup/_popup.html',{})
+		@@include('_js.html',{})
+	</body>
+</html>

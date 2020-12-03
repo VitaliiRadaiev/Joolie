@@ -1,0 +1,534 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+// ==== ШРИФТЫ ===========================================================================================
+@import "fonts";
+// ==== // ШРИФТЫ ===========================================================================================
+
+// ==== ПЕРЕМЕННЫЕ ===========================================================================================
+@import "vars"; 
+// ==== // ПЕРЕМЕННЫЕ ===========================================================================================
+
+
+// ==== НОРМАЛАЙЗ ===========================================================================================
+@import "normalize";
+// ==== // НОРМАЛАЙЗ ===========================================================================================
+
+//<МИКСИНЫ>===============================================================================================
+@import "mixins.scss";
+//</МИКСИНЫ>===============================================================================================
+
+//<ICOMOON>===============================================================================================
+@import "../icomoon/style";
+//</ICOMOON>===============================================================================================
+
+//<FANCYBOX>===============================================================================================
+//@import "fancybox.scss";
+//<FANCYBOX>===============================================================================================
+
+// ==== ПЛАГИНЫ ===========================================================================================
+@import "swiper-bundle";
+// ==== // ПЛАГИНЫ ===========================================================================================
+
+// ==== НАЧАЛЬНЫЕ САТИЛИ ФОРМЫ ===========================================================================================
+//@import "forms";
+// ==== НАЧАЛЬНЫЕ САТИЛИ ФОРМЫ ===========================================================================================
+
+
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html {
+	font-size: 10px;
+}
+html,
+body {
+	height: 100%;
+	min-width: $minwidth;
+	margin: 0 auto;
+}
+body {
+	line-height: 1;
+	font-family: $mainFontFamily;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	color: #000;
+	font-size: 1.6rem;
+
+	opacity: 0;
+	transition: opacity .8s ease;
+
+	&.lock {
+		overflow: hidden;
+	}
+
+	&.is-load {
+		opacity: 1;
+	}
+
+}
+
+input,
+button,
+textarea {
+	font-family: $mainFontFamily;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+// 	font-weight: inherit;
+// 	font-size: inherit;
+// }
+
+
+
+.center {
+	text-align: center;
+}
+
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	&.loaded {
+	}
+}
+
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+.logo {
+	max-width: 248px;
+	width: 100%;
+	transition: all .3s ease;
+
+	& img {
+		width: 100%;
+	}
+
+	& svg {
+		width: 100%;
+		height: auto;
+
+		& .right-line, & .left-line {
+			stroke-dashoffset:109;
+			stroke-dasharray: 109;
+			animation: animdash 12s infinite ease;
+		}
+
+	}
+}
+
+@keyframes animdash {
+	0% {
+		stroke-dashoffset:0;
+	}
+	50% {
+		stroke-dashoffset:109;
+	}
+	100% {
+		stroke-dashoffset:0;
+	}
+}
+
+
+
+// === title ========================================================================
+.title-1 {
+	font-family: $seconFontFamily;
+	font-size: 80px;
+	line-height: 110%;
+	text-transform: capitalize;
+	color: $titleColor;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: 400;
+
+	@media (max-width: $md3+px) {
+		font-size: 64px;
+	}
+
+	@media (max-width: 575px) {
+		font-size: 38px;
+	}
+}
+.title-2 {
+	 font-family: $seconFontFamily;
+	 font-size: 65px;
+	 line-height: 110%;
+	 text-transform: capitalize;
+	 color: $titleColor;
+	 font-weight: 400;
+
+	 @media (max-width: $md3+px) {
+	 	font-size: 59px;
+	 }
+
+	 @media (max-width: 575px) {
+	 	font-size: 49px;
+	 }
+}
+
+.title-3 {
+	font-family: $seconFontFamily;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 110%;
+	text-transform: capitalize;
+	color: $titleColor;
+
+	@media (max-width: $md3+px) {
+		font-size: 42px;
+	}
+
+	@media (max-width: 575px) {
+		font-size: 32px;
+	}
+}
+
+.title-5 {
+	font-family: $seconFontFamily;
+	font-size: 24px;
+	line-height: 120%;
+	text-transform: capitalize;
+	color: $titleColor;
+
+	@media (max-width: 575px) {
+		font-size: 20px;
+	}
+}
+
+.suptitle {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 170%;
+	text-transform: uppercase;
+	color: $mainColor;
+
+	@media (max-width: $md3+px) {
+		font-size: 11px;
+	}
+
+/*	@media (max-width: 575px) {
+		font-size: 9px;
+	}*/
+
+	& > span {
+		margin: 0 0.57em;
+		width: 2.14em;
+		display: inline-block;
+
+		& img {
+			width: 100%;
+		}
+	}
+}
+
+.text {
+	font-size: 16px;
+	line-height: 170%;
+	color: $textColor;
+
+	@media (max-width: 575px) {
+		font-size: 14px;
+	}
+}
+// === and title ========================================================================
+
+
+
+// === btn ========================================================================
+.btn-default {
+	position: relative;
+	display: inline-block;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 170%;
+	text-transform: uppercase;
+	color: $titleColor;
+	padding: 1.08em 3.33em;
+	border-top: 2px solid $titleColor;
+	border-bottom: 2px solid $titleColor;
+	border-left: 2px solid transparent;
+	border-right: 2px solid transparent;
+	transition: all .2s ease .2s;
+
+	&:before, &:after {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 50%;
+		height: 100%;
+		width: 2px;
+		background: $titleColor;
+		transition: all 0s ease;
+		opacity: 0;
+	}
+
+	@media (min-width: 992px) {
+		&:hover {
+			border-left: 2px solid $titleColor;
+			border-right: 2px solid $titleColor;
+			background: rgba(#000, 0.1);
+
+
+			&:before {
+				left: -2px;
+				opacity: 1;
+				transition: all .2s ease;
+			}
+
+			&:after {
+				left: 100%;
+				opacity: 1;
+				transition: all .2s ease;
+			}
+		}
+	}
+
+	@media (max-width: 575px) {
+		font-size: 9px;
+	}
+}
+
+button.btn-default {
+
+}
+
+// === and btn ========================================================================
+
+.input {
+	min-height: 55px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid rgba($textColor, 0.2);
+
+	&::placeholder {
+		font-size: 14px;
+		line-height: 170%;
+		color: $grey;
+
+	}
+}
+
+.link {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 170%;
+	color: $textColor;
+	transition: all .2s ease;
+
+	&:hover {
+		color: $mainColor;
+		text-decoration: none !important;
+	}
+}
+
+
+// === TEXT CONTETN BLOCK ========================================================================
+.text-content {
+	& h1 {}
+	& h2 {}
+	& h3 {}
+	& h4 {}
+	& h5 {}
+	& h6 {}
+
+	& p {}
+
+	& ul {}
+
+	& ol {}
+
+	& figure {}
+
+}
+// === and TEXT CONTETN BLOCK ========================================================================
+
+
+
+
+
+// ==== PAGES =====================================================
+
+	// ==== HOME =====================================================
+	@import "#home";
+	// ==== AND HOME =====================================================
+	
+	// ==== ABOUT =====================================================
+	@import "#about";
+	// ==== AND ABOUT =====================================================
+
+// ==== AND PAGES =====================================================
+
+
+
+// ==== BLOCKS =====================================================
+	
+	// ==== HEADER =====================================================
+	@import "../blocks/header/header";
+	// ==== AND HEADER =====================================================
+
+	// ==== FOOTER =====================================================
+	@import "../blocks/footer/#footer";
+	// ==== AND FOOTER =====================================================
+
+	// ==== БУРГЕР ===========================================================
+	@import "../blocks/burger/burger";
+	// ==== БУРГЕР ==========================================================
+	
+	// ==== FORM SEARCH ===========================================================
+	@import "../blocks/forms/form-search/form-search";
+	// ==== AND FORM SEARCH ==========================================================
+	
+	// ==== PROMO SLIDER ==========================================================
+	@import "../blocks/promo-slider/promo-slider";
+	// ==== AND PROMO SLIDER ==========================================================
+	
+	// ==== LOGOS BOCK ==========================================================
+	@import "../blocks/logos-block/logos-block";
+	// ==== AND LOGOS BOCK ==========================================================
+	
+	// ==== PRODUCTS CATEGORY ==========================================================
+	@import "../blocks/products-category/products-category";
+	// ==== AND PRODUCTS CATEGORY ==========================================================
+	
+	// ==== HEAD ==========================================================
+	@import "../blocks/head/head";
+	// ==== AND HEAD ==========================================================
+	
+	// ==== POPULAR PRODUCTS ==========================================================
+	@import "../blocks/populsr-products/populsr-products";
+	// ==== AND POPULAR PRODUCTS ==========================================================
+	
+	// ==== CARD ==========================================================
+	@import "../blocks/card/card";
+	// ==== AND CARD ==========================================================
+	
+	// ==== TEXT VIDE BLOCK ==========================================================
+	@import "../blocks/text-video-block/text-video-block";
+	// ==== AND TEXT VIDE BLOCK ==========================================================
+	
+	// ==== VIDEO ==========================================================
+	@import "../blocks/video/video";
+	// ==== AND VIDEO ==========================================================
+	
+	// ==== ADVANTAGES ==========================================================
+	@import "../blocks/advantages/advantages";
+	// ==== AND ADVANTAGES ==========================================================
+	
+	// ==== GET YOUR GIFT ==========================================================
+	@import "../blocks/get-your-gift-block/get-your-gift-block";
+	// ==== AND GET YOUR GIFT ==========================================================
+	
+	// ==== LATEST ARTICLES ==========================================================
+	@import "../blocks/latest-articles/latest-articles";
+	// ==== AND LATEST ARTICLES ==========================================================
+	
+	// ==== CARD ARTICLE ==========================================================
+	@import "../blocks/card-article/card-article";
+	// ==== AND CARD ARTICLE ==========================================================
+	
+	// ==== TESTIMONIALS SLIDER ==========================================================
+	@import "../blocks/testimonials-slider/testimonials-slider";
+	// ==== AND TESTIMONIALS SLIDER ==========================================================
+	
+	// ==== INSTAGRAM BLOCK ==========================================================
+	@import "../blocks/instagram-block/instagram-block";
+	// ==== AND INSTAGRAM BLOCK ==========================================================
+	
+	// ==== TIME BLOCK ==========================================================
+	@import "../blocks/time-block/time-block";
+	// ==== AND TIME BLOCK ==========================================================
+	
+	// ==== HERO ==========================================================
+	@import "../blocks/hero/hero";
+	// ==== AND HERO ==========================================================
+	
+	// ==== BREADCRUMB ==========================================================
+	@import "../blocks/breadcrumb/breadcrumb";
+	// ==== AND BREADCRUMB ==========================================================
+	
+	// ==== VIDEO BLOCK ==========================================================
+	@import "../blocks/video-block/video-block";
+	// ==== AND VIDEO BLOCK ==========================================================
+	
+
+
+// ==== AND BLOCKS =====================================================
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('_head.html',{
+	"title": "Joolie"
+	})
+	<body>
+		<!-- == WRAPPER ================== -->
+		<div class="wrapper about _padding-top">
+			<!-- == HEADER ================== -->
+			@@include('blocks/header/_header.html',{})
+			<!-- == // HEADER ================== -->
+
+			<!-- == PAGE CONTENT ================== -->
+			<main class="page">
+				@@include('blocks/hero/_hero.html',{
+					"title": 'About',
+				})
+				
+				<section class="about__text-block text-block-about">
+					<div class="text-block-about__body container">
+						<div class="text-block-about__column text-block-about__column_1 text-content">
+							@@include('blocks/head/_head.html',{
+								"parentClass": 'text-block-about__head',
+								"suptitle": {
+									"left": '',
+									"right": 'find your beauty'
+								},
+								"title": 'Joolie - store of festive products!', 
+								"subtitle": {
+									"is": true,
+									"text": 'Only the best for organizing wedding ceremonies at the best price!',
+								},
+								"text": {
+									"is": true,
+									"text": 'You can buy everything you need for a birthday, wedding, corporate event or party! We offer the largest assortment of candles for a cake, party dishes, balloons. Prices from the manufacturer and discounts, the availability of goods in a warehouse in sufficient volume and prompt dispatch of orders to anywhere in the world are guaranteed!',
+								},
+						    })
+
+						    <ul>
+						    	<li>
+						    		Sint velit ut voluptate qui sunt cupidatat ipsum sint aliqua dolore laboris. Ex non nostrud ullamco et tempor.
+						    	</li>
+						    	<li>
+						    		Ex non nostrud ullamco et tempor cillum laborum aliqua ea laboris labore. Sint velit ut voluptate qui sunt cupidatat ipsum sint aliqua dolore laboris. 
+						    	</li>
+						    	<li>
+						    		Unt cupidatat ipsum sint aliqua dolore laboris. Ex non nostrud ullamco et tempor cillum laborum aliqua ea laboris labore.
+						    	</li>
+						    	<li>
+						    		Ex non nostrud ullamco et tempor cillum laborum aliqua ea laboris labore.
+						    	</li>
+						    </ul>
+						</div>
+						<div class="text-block-about__column text-block-about__column_2">
+							<ul class="text-block-about__advantages advantages-about">
+								<li>
+									<div class="advantages-about__count">
+										4,583 <span><img src="img/icons/icon-circles.svg" alt="icon"></span>
+									</div>
+									<div class="advantages-about__label">Trendy Poducts</div>
+								</li>
+								<li>
+									<div class="advantages-about__count">
+										289 
+									</div>
+									<div class="advantages-about__label">Satisfied Clients</div>
+								</li>
+								<li>
+									<div class="advantages-about__count">
+										15+ <span><img src="img/icons/icon-circles.svg" alt="icon"></span>
+									</div>
+									<div class="advantages-about__label">Years of Experience</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				@@include('blocks/video-block/_video-block.html',{})
+				
+				@@include('blocks/advantages/_advantages.html',{})
+
+				@@include('blocks/instagram-block/_instagram-block.html',{})
+
+				@@include('blocks/logos-block/_logos-block.html',{})
+			</main>
+			<!-- == // PAGE CONTENT ================== -->
+
+			<!-- == FOOTER ================== -->
+			@@include('blocks/footer/_footer.html',{})
+			<!-- == // FOOTER ================== -->
+		</div>
+		<!-- == // WRAPPER ================== -->
+		@@include('blocks/popup/_popup.html',{})
+		@@include('_js.html',{})
+	</body>
+</html>
