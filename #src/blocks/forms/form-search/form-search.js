@@ -1,12 +1,16 @@
 {
-	let fromSearch = document.querySelector('.form-search');
+	let fromSearch = document.querySelectorAll('.form-search');
 	if(fromSearch) {
-		let input = fromSearch.querySelector('.form-search__input');
-		input.addEventListener('focus', () => {
-			fromSearch.classList.add('_focus');
-		})
-		input.addEventListener('blur', () => {
-			fromSearch.classList.remove('_focus');
+		fromSearch.forEach(form => {
+			let input = form.querySelector('.form-search__input'); 
+			input.addEventListener('focus', () => {
+				if(!form.classList.contains('form-search_open')) { 
+					form.classList.add('_focus');
+				}
+			})
+			input.addEventListener('blur', () => {
+				form.classList.remove('_focus');
+			})
 		})
 	}
 }

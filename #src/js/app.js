@@ -33,6 +33,7 @@ $(document).ready(function() {
 
 	@@include('_function.js');
 	@@include('da.js');
+	@@include('forms.js');
 
 
 // === Проверка, поддержка браузером формата webp ==================================================================
@@ -78,6 +79,8 @@ $(document).ready(function() {
 	}
 }
 // ==== AND ADD PADDING-TOP ================================
+
+	@@include('#shop.js');
 
 // ==== AND PAGES =====================================================
 

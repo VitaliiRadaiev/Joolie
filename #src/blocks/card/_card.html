@@ -1,5 +1,15 @@
 <div class="card">
 	<div class="card__img ibg">
+		<div class="card__label-wrap">
+			@@if (sale === true) {
+				<div class="card__label sale">Sale</div>
+
+		    }
+	    	@@if (neww === true) {
+	    		<div class="card__label new">New</div>   
+	        }
+			
+		</div>
 		<a href="#">
 			<img class="lazy" data-src="@@imgSrc" src="img/card/placeholder.jpg" alt="img">
 		</a>

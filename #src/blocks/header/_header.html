@@ -95,7 +95,11 @@
 			<div class="header__action">
 				<ul class="header__action-list">
 					<li>
-						@@include('../forms/form-search/_form-search.html',{})
+						@@include('../forms/form-search/_form-search.html',{
+ 							"modificator": '',
+ 							"da": 'data-da="header__menu,last,600"',
+ 							"placeholder": '',
+					    })
 					</li>
 					<li>
 						<a href="#" class="header__action-link">
