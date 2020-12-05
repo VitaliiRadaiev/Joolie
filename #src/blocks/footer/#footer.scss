@@ -142,6 +142,7 @@
 				font-size: 14px;
 				line-height: 170%;
 				color: #444444;
+				transition: all .2s ease;
 
 				&:hover {
 					color: rgba(#444444, 0.7);
@@ -210,11 +211,18 @@
 		align-items: center;
 		transition: all .2s ease;
 
+		& > span {
+			& svg {
+				stroke: $mainColor;
+				transition: all .2s ease;
+			}
+		}
+
 		@media (min-width: 992px) {
 			&:hover {
 				& > span {
 					& svg {
-						stroke: $mainColor;
+						transition: all .2s ease;
 					}
 				}
 			}
