@@ -3,3 +3,5 @@
 @@include('jquery.parallax.js');
 @@include('nouislider.js');
 @@include('wNumb.min.js');
+@@include('Drift.js');
+

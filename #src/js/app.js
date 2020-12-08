@@ -3,112 +3,114 @@ var isMobile = { Android: function () { return navigator.userAgent.match(/Androi
 
 
 // === lazy load ==================================================================
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+document.addEventListener("DOMContentLoaded", function () {
+	var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
 
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target;
-          lazyImage.src = lazyImage.dataset.src;
-          //lazyImage.srcset = lazyImage.dataset.srcset;
-          lazyImage.classList.remove("lazy");
-          lazyImageObserver.unobserve(lazyImage);
-        }
-      });
-    });
+	if ("IntersectionObserver" in window) {
+		let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+			entries.forEach(function (entry) {
+				if (entry.isIntersecting) {
+					let lazyImage = entry.target;
+					lazyImage.src = lazyImage.dataset.src;
+					//lazyImage.srcset = lazyImage.dataset.srcset;
+					lazyImage.classList.remove("lazy");
+					lazyImageObserver.unobserve(lazyImage);
+				}
+			});
+		});
 
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage);
-    });
-  } else {
-    // Possibly fall back to event handlers here
-  }
+		lazyImages.forEach(function (lazyImage) {
+			lazyImageObserver.observe(lazyImage);
+		});
+	} else {
+		// Possibly fall back to event handlers here
+	}
 });
 // === // lazy load ==================================================================
 
-$(document).ready(function() {
+$(document).ready(function () {
 	document.body.classList.add('is-load');
 
 	@@include('_function.js');
 	@@include('da.js');
 	@@include('forms.js');
 
-
-// === Проверка, поддержка браузером формата webp ==================================================================
+	// === Проверка, поддержка браузером формата webp ==================================================================
 
 	function testWebP(callback) {
 
-	var webP = new Image();
-	webP.onload = webP.onerror = function () {
-	callback(webP.height == 2);
-	};
-	webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+		var webP = new Image();
+		webP.onload = webP.onerror = function () {
+			callback(webP.height == 2);
+		};
+		webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
 	}
 
 	testWebP(function (support) {
 
-	if (support == true) {
-	document.querySelector('body').classList.add('webp');
-	}else{
-	document.querySelector('body').classList.add('no-webp');
-	}
+		if (support == true) {
+			document.querySelector('body').classList.add('webp');
+		} else {
+			document.querySelector('body').classList.add('no-webp');
+		}
 	});
 
-// === // Проверка, поддержка браузером формата webp ==================================================================
+	// === // Проверка, поддержка браузером формата webp ==================================================================
 
 
 
 
-// ==== parallax =====================================================
-	$('._parallax').parallax();	
-// ==== parallax =====================================================
+	// ==== parallax =====================================================
+	$('._parallax').parallax();
+	// ==== parallax =====================================================
 
 
-// ==== PAGES =====================================================
+	// ==== PAGES =====================================================
 
-// ==== ADD PADDING-TOP ================================
-{
-	let wrapper = document.querySelector('.wrapper');
-	if(wrapper) {
-		let headerHeight = document.querySelector('.header').clientHeight;
-		if(wrapper.classList.contains('_padding-top')) {
-			wrapper.style.paddingTop = headerHeight + 'px';
+	// ==== ADD PADDING-TOP ================================
+	{
+		let wrapper = document.querySelector('.wrapper');
+		if (wrapper) {
+			let headerHeight = document.querySelector('.header').clientHeight;
+			if (wrapper.classList.contains('_padding-top')) {
+				wrapper.style.paddingTop = headerHeight + 'px';
+			}
 		}
 	}
-}
-// ==== AND ADD PADDING-TOP ================================
+	// ==== AND ADD PADDING-TOP ================================
 
 	@@include('#shop.js');
+	@@include('#product-page.js');
 
-// ==== AND PAGES =====================================================
+	// ==== AND PAGES =====================================================
 
 
 
 
-// ==== BLOCKS =====================================================	
+	// ==== BLOCKS =====================================================	
 
 	@@include('../blocks/burger/burger.js');
-	
+
 	@@include('../blocks/header/#header.js');
-	
+
 	@@include('../blocks/forms/form-search/form-search.js');
-	
+
 	@@include('../blocks/promo-slider/promo-slider.js');
 
 	@@include('../blocks/products-category/products-category.js');
-	
+
 	@@include('../blocks/video/video.js');
-	
+
 	@@include('../blocks/latest-articles/latest-articles.js');
-	
+
 	@@include('../blocks/testimonials-slider/testimonials-slider.js');
-	
+
 	@@include('../blocks/time-block/time-block.js');
-	
+
 	@@include('../blocks/populsr-products/populsr-products.js');
 
-// ==== AND BLOCKS =====================================================
+	@@include('../blocks/rating/rating.js');
+
+	// ==== AND BLOCKS =====================================================
 
 });

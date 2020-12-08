@@ -34,6 +34,7 @@
 
 // ==== ПЛАГИНЫ ===========================================================================================
 @import "swiper-bundle";
+@import "drift-basic";
 // ==== // ПЛАГИНЫ ===========================================================================================
 
 // ==== НАЧАЛЬНЫЕ САТИЛИ ФОРМЫ ===========================================================================================
@@ -261,6 +262,23 @@ img {
 	}
 }
 
+.title-4 {
+	font-family: $seconFontFamily;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 120%;
+	text-transform: capitalize;
+	color: $titleColor;
+
+	@media (max-width: $md3+px) {
+		font-size: 36px;
+	}
+
+	@media (max-width: 575px) {
+		font-size: 28px;
+	}
+}
+
 .title-5 {
 	font-family: $seconFontFamily;
 	font-size: 24px;
@@ -367,7 +385,7 @@ img {
 }
 
 button.btn-default {
-
+	background: transparent;
 }
 
 // === and btn ========================================================================
@@ -377,6 +395,30 @@ button.btn-default {
 	display: flex;
 	align-items: center;
 	border-bottom: 1px solid rgba($textColor, 0.2);
+	width: 100%;
+
+	&:focus {
+		border-bottom: 1px solid rgba($textColor, 0.8);
+	}
+
+	&::placeholder {
+		font-size: 14px;
+		line-height: 170%;
+		color: $grey;
+	}
+}
+
+.textarea {
+	min-height: 109px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid rgba($textColor, 0.2);
+	resize: none;
+	width: 100%;
+
+	&:focus {
+		border-bottom: 1px solid rgba($textColor, 0.8);
+	}
 
 	&::placeholder {
 		font-size: 14px;
@@ -406,10 +448,35 @@ button.btn-default {
 	& h2 {}
 	& h3 {}
 	& h4 {}
-	& h5 {}
+
+	& h5 {
+		font-family: $seconFontFamily;
+		font-size: 24px;
+		line-height: 120%;
+		text-transform: capitalize;
+		color: $titleColor;
+		margin-bottom: 0.83em;
+	
+		@media (max-width: 575px) {
+			font-size: 20px;
+		}
+	}
 	& h6 {}
 
-	& p {}
+	& p {
+		font-size: 16px;
+		line-height: 170%;
+		color: $textColor;
+		margin-bottom: 1em;
+	
+		@media (max-width: 575px) {
+			font-size: 14px;
+		}
+
+		& ~ h5 {
+			margin-top: 1em;
+		}
+	}
 
 	& ul {}
 
@@ -419,6 +486,37 @@ button.btn-default {
 
 }
 // === and TEXT CONTETN BLOCK ========================================================================
+
+
+// === BLOCK COLUMN 3 ========================================================================
+.block-column-3 {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+
+	@media (max-width: $md2+px) {
+		margin: 0 -7.5px;
+	}
+
+	& > li {
+		flex: 0 1 33.333%;
+		padding: 0 15px;
+		margin-bottom: 30px;
+
+		@media (max-width: $md2+px) {
+			padding: 0 7.5px;
+		}
+
+		@media (max-width: $md3+px) {
+			flex: 0 1 50%;			
+		}
+
+		@media (max-width: $md4+px) {
+			flex: 0 1 100%;			
+		}
+	}
+}
+// === and BLOCK COLUMN 3 ========================================================================
 
 
 
@@ -437,6 +535,10 @@ button.btn-default {
 	// ==== SHOP =====================================================
 	@import "#shop";
 	// ==== AND SHOP =====================================================
+	
+	// ==== PRODUCT PAGE =====================================================
+	@import "#product-page";
+	// ==== AND PRODUCT PAGE =====================================================
 
 // ==== AND PAGES =====================================================
 
@@ -539,7 +641,16 @@ button.btn-default {
 	// ==== PAGINATION ==========================================================
 	@import "../blocks/pagination/pagination";
 	// ==== AND PAGINATION ==========================================================
+
+	// ==== RATING ==========================================================
+	@import "../blocks/rating/rating.scss";
+	// ==== AND RATING ==========================================================
 	
+	// ==== FORM SEND MESSAGE ==========================================================
+	@import "../blocks/forms/form-send-message/form-send-message";
+	// ==== AND FORM SEND MESSAGE ==========================================================
+	
+
 
 
 // ==== AND BLOCKS =====================================================

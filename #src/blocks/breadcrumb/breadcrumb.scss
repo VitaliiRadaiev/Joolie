@@ -3,9 +3,10 @@
 		display: flex;
 		flex-wrap: wrap;
 		list-style: none;
+		justify-content: center;
 	}
 	&__item {
-		white-space: nowrap;
+		//white-space: nowrap;
 		font-family: $mainFontFamily;
 		font-weight: 500;
 		font-size: 16px;
@@ -29,6 +30,4 @@
 			}
 		}
 	}
-}
-.active {
 }
