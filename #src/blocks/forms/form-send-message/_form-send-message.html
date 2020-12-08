@@ -16,15 +16,17 @@
     },
     })
 
-    @@include('../../rating/_rating.html',{
-    "parentClass": 'form-send-message__rating big',
-    "edit": 'edit',
-    "stars": '0',
-    "value": {
-    "is": false,
-    "val": '5.0',
+    @@if(star === true) {
+        @@include('../../rating/_rating.html',{
+            "parentClass": 'form-send-message__rating big',
+            "edit": 'edit',
+            "stars": '0',
+            "value": {
+            "is": false,
+            "val": '5.0',
+            }
+        })
     }
-    })
 
     <div class="form-send-message__inner">
         <div class="form-send-message__input form-send-message__input_name">

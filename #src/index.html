@@ -22,7 +22,30 @@
 
 				@@include('blocks/text-video-block/_text-video-block.html',{})
 				
-				@@include('blocks/advantages/_advantages.html',{})
+				@@include('blocks/advantages/_advantages.html',{
+					"data": [
+                    {
+                        "icon": 'img/advantages/icon-dress.svg',
+                        "title": 'wide selection',
+                        "text": 'А huge number of products for your celebration day.',
+                    },
+                    {
+                        "icon": 'img/advantages/icon-delivery.svg',
+                        "title": 'fast Delivery',
+                        "text": 'We deliver the next day after the order, as you wish.',
+					},
+					{
+                        "icon": 'img/advantages/icon-girl.svg',
+                        "title": 'individual approach',
+                        "text": 'We discuss all the little things you need and want.',
+                    },
+                    {
+                        "icon": 'img/advantages/icon-idea.svg',
+                        "title": 'Creative ideas',
+                        "text": 'Our designers are full of new creative ideas for you.',
+                    },
+                ]
+				})
 				
 				@@include('blocks/get-your-gift-block/_get-your-gift-block.html',{})
 				
