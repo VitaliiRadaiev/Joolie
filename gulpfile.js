@@ -84,6 +84,7 @@ function css() {
 				cascade: true
 			})
 		)
+		.pipe(browsersync.stream())
 		.pipe(dest(path.build.css))
 		.pipe(clean_css())
 		.pipe(

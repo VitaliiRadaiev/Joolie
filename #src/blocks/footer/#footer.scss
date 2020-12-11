@@ -1,3 +1,4 @@
+
 .footer {
 	position: relative;
 	padding-top: 110px;
@@ -200,6 +201,10 @@
 	}
 	&__form-input {
 		flex: 0 0 calc(100% - 34px);
+
+		&:focus {
+			border-bottom: 1px solid rgba($textColor, 0.2);
+		}
 	}
 	&__form-submit {
 		flex: 0 0 34px;
@@ -213,7 +218,6 @@
 
 		& > span {
 			& svg {
-				stroke: $mainColor;
 				transition: all .2s ease;
 			}
 		}
@@ -223,6 +227,7 @@
 				& > span {
 					& svg {
 						transition: all .2s ease;
+						stroke: $mainColor;
 					}
 				}
 			}

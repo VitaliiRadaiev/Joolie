@@ -81,6 +81,7 @@ $(document).ready(function () {
 
 	@@include('#shop.js');
 	@@include('#product-page.js');
+	@@include('#FAQ.js');
 
 	// ==== AND PAGES =====================================================
 
