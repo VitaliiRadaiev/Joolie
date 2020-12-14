@@ -12,6 +12,8 @@
 		@media (max-width: 600px) {
 			margin-bottom: 0px;
 		}
+		border-bottom: 1px solid rgba($titleColor, 0.1);
+		padding-bottom: 8px;
 
 		& .form-search__label {
 			display: none;
@@ -22,6 +24,7 @@
 			width: calc(100% - 35px);
 			flex: 1 1 auto;
 			border: none;
+			
 
 			@media (max-width: $md3+px) {
 				padding: 0 15px;

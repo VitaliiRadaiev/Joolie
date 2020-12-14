@@ -45,8 +45,7 @@
 	&__column {
 		&_1 {
 			flex: 0 0 242px;
-			border-bottom: 1px solid rgba($titleColor, 0.1);
-			padding: 5px 0 7px;
+			padding: 5px 0 0px;
 
 			@media (max-width: $md2+px) {
 				flex: 0 1 100%;

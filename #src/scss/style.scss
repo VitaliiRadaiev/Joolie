@@ -447,7 +447,23 @@ button.btn-default {
 	& h1 {}
 	& h2 {}
 	& h3 {}
-	& h4 {}
+	& h4 {
+		font-family: $seconFontFamily;
+		font-weight: 400;
+		font-size: 40px;
+		line-height: 120%;
+		text-transform: capitalize;
+		color: $titleColor;
+		margin-bottom: 0.75em;
+	
+		@media (max-width: $md3+px) {
+			font-size: 36px;
+		}
+	
+		@media (max-width: 575px) {
+			font-size: 28px;
+		}
+	}
 
 	& h5 {
 		font-family: $seconFontFamily;
@@ -482,7 +498,17 @@ button.btn-default {
 
 	& ol {}
 
-	& figure {}
+	& figure {
+		margin: 50px 0 50px;
+
+		@media (max-width: $md4+px) {
+			margin: 30px 0 30px;
+		}
+
+		& img {
+			width: 100%;
+		}
+	}
 
 }
 // === and TEXT CONTETN BLOCK ========================================================================
@@ -551,6 +577,10 @@ button.btn-default {
 	// ==== BLOG =====================================================
 	@import "#blog";
 	// ==== AND BLOG =====================================================
+	
+	// ==== BLOGA DETAIL=====================================================
+	@import "#blog-detail";
+	// ==== AND BLOGA DETAIL =====================================================
 
 // ==== AND PAGES =====================================================
 
@@ -663,8 +693,12 @@ button.btn-default {
 	// ==== AND FORM SEND MESSAGE ==========================================================
 	
 	// ==== CARD TIMER ==========================================================
-	@import "../blocks/card-timer/card-timer";
+		
 	// ==== AND CARD TIMER ==========================================================
+	
+	// ==== CATEGORIES LIST ==========================================================
+	@import "../blocks/categories-list/categories-list";
+	// ==== AND CATEGORIES LIST ==========================================================
 	
 
 
