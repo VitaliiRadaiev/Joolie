@@ -46,6 +46,9 @@
 			line-height: 150%;
 			color: $textColor;
 
+			& > span {
+				color: #999999;
+			}
 		}
 	}
 	&__price {
