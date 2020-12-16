@@ -5,4 +5,5 @@
 @@include('wNumb.min.js');
 @@include('Drift.js');
 @@include('libs/inputmask.min.js');
+@@include('libs/datepicker-full.min.js');
 
