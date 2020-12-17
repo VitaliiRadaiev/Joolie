@@ -50,39 +50,7 @@
 
 
 
-.text-content {
-	& ul {
-		margin: 30px 0 0;
-		& > li {
-			padding-left: 59px;
-			margin-bottom: 15px;
-			position: relative;
 
-			font-size: 16px;
-			line-height: 170%;
-			color: $textColor;
-
-			@media (max-width: 575px) {
-				padding-left: 30px;
-				font-size: 14px;
-				&:before {
-					left: 5px;
-				}
-			}
-
-			&:before {
-				position: absolute;
-				content: '';
-				top: 5px;
-				left: 30px;
-				width: 14px;
-				height: 15px;
-				background: url(../img/icons/check.svg) center no-repeat;
-				background-size: contain;
-			}
-		}
-	}
-}
 .advantages-about {
 	margin-bottom: -15px;
 

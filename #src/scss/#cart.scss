@@ -154,62 +154,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-.block-column-2 {
-    display: flex;
-
-    @media (max-width: $md2+px) {
-        display: block;
-    }
-}
-.column-1 {
-    flex: 1 1 auto;
-    margin-right: 60px;
-
-    @media (max-width: $md2+px) {
-        margin-right: 0;
-        margin-bottom: 50px;
-    }
-}
-.column-2 {
-    flex: 0 0 329px;
-    padding-left: 49px;
-    border-left: 1px solid rgba($titleColor, 0.1);
-    @media (max-width: $md2+px) {
-       padding-left: 0;
-       border: none;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .selected-products {
 
     &__head {
@@ -249,6 +193,54 @@
             border-bottom: 1px solid rgba($titleColor, 0.1);
             padding-bottom: 9px;
             margin-bottom: 30px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        & .selected-products__clean {
+            margin-right: 20px;
+            margin-bottom: 15px;
+            margin-left: -5px;
+        }
+
+        & .checkbox-wrap {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__clean {
+        display: inline-flex;
+        align-items: center;
+        padding: 2px 5px;
+        transition: all .2s ease;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 170%;
+        text-transform: uppercase;
+        color: $titleColor;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background: rgba($titleColor, 0.1);
+            }
+        }
+
+        & > span {
+            min-width: 11px;
+            margin-right: 10px;
+            display: inline-flex;
+            align-items: center;
+            padding-bottom: 2px;
+
+            & img {
+                width: 100%;
+            }
         }
     }
 }
@@ -404,6 +396,37 @@
             flex: 0 0 auto;
         }
     }
+
+    &__add-to-cart {
+        display: inline-flex;
+        align-items: center;
+        padding: 2px 5px;
+        transition: all .2s ease;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 170%;
+        text-transform: uppercase;
+        color: $titleColor;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background: rgba($titleColor, 0.1);
+            }
+        }
+
+        & > span {
+            min-width: 15px;
+            margin-right: 10px;
+            display: inline-flex;
+            align-items: center;
+            padding-bottom: 2px;
+
+            & img {
+                width: 100%;
+            }
+        }
+    }
 }
 
 
@@ -523,24 +546,4 @@
 
 
 
-.btn-submit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 50px;
-    padding: 10px 40px;
-    background: $mainColor;
-    transition: all .2s ease;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 170%;
-    text-transform: uppercase;
-    color: #FFFFFF;
 
-    @media (min-width: 992px) {
-        &:hover {
-            background: #eb6f86;
-        }
-    }
-}

@@ -238,7 +238,7 @@
 	font-size: 14px;
 	line-height: 170%;
 	text-transform: uppercase;
-	color: $titleColor;
+	color: $titleColor !important;
 	cursor: pointer;
 	//margin-right: 16px;
 
@@ -268,7 +268,7 @@
 	font-size: 14px;
 	line-height: 170%;
 	text-transform: uppercase;
-	color: $titleColor;
+	color: $titleColor !important;
 	cursor: pointer;
 
 	@media (min-width: 992px) {

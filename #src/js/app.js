@@ -83,6 +83,7 @@ $(document).ready(function () {
 	@@include('#product-page.js');
 	@@include('#FAQ.js');
 	@@include('#checkout.js');
+	@@include('#profile.js');
 
 	// ==== AND PAGES =====================================================
 

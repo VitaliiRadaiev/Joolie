@@ -212,13 +212,13 @@
 
         @media (min-width: 992px) {
             &:hover {
-                background: rgba($mainColor, 0.6);
+                background: $hoverLinkColor;
                 
             }
         }
 
         &:active {
-            background: rgba($mainColor, 0.6);
+            background: $hoverLinkColor;
         }
     }
 

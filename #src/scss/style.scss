@@ -146,6 +146,9 @@ img {
 	text-align: center;
 }
 
+.transparent {
+    background: transparent;
+}
 
 .wrapper {
 	width: 100%;
@@ -153,6 +156,11 @@ img {
 	overflow: hidden;
 	&.loaded {
 	}
+}
+
+main.page {
+	position: relative;
+	z-index: 2;
 }
 
 
@@ -398,6 +406,29 @@ button.btn-default {
 	background: transparent;
 }
 
+
+.btn-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    padding: 10px 40px;
+    background: $mainColor;
+    transition: all .2s ease;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 170%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    @media (min-width: 992px) {
+        &:hover {
+            background: $hoverLinkColor;
+        }
+    }
+}
+
 // === and btn ========================================================================
 
 .input {
@@ -438,6 +469,73 @@ button.btn-default {
 	}
 }
 
+.select__select {
+    min-height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid rgba($titleColor, 0.1);
+
+    & .select__item {
+        min-width: auto;
+    }
+
+    & .select__value {
+        padding: 0;
+
+        & > span {
+            font-size: 14px;
+            line-height: 170%;
+            color: $grey;
+        }
+    }
+}
+
+
+
+.checkbox-wrap {
+    & .checkbox {
+        display: none;
+
+        &:checked {
+
+            & + .checkbox-wrap__label {
+                &:before {
+                    background-image: url(../img/icons/check-black.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+        }
+    }
+
+    &__label {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 170%;
+        color: $textColor;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+
+
+
+        &:before {
+            margin-top: 3.5px;
+            margin-right: 15px;
+            content: '';
+            height: 14px;
+            min-width: 14px;
+            background-color: #F8F8FA;
+            border: 1px solid rgba(17, 17, 17, 0.1);
+        }   
+    }
+}
+
+
+
 .link {
 	font-weight: 600;
 	font-size: 14px;
@@ -454,9 +552,60 @@ button.btn-default {
 
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
-	& h1 {}
-	& h2 {}
-	& h3 {}
+	& h1 {
+		font-family: $seconFontFamily;
+		font-size: 80px;
+		line-height: 110%;
+		text-transform: capitalize;
+		color: $titleColor;
+		margin-bottom: 0.75em;
+		margin-top: 0;
+		font-weight: 400;
+	
+		@media (max-width: $md3+px) {
+			font-size: 64px;
+		}
+	
+		@media (max-width: 575px) {
+			font-size: 38px;
+		}
+	}
+	& h2 {
+		font-family: $seconFontFamily;
+		font-size: 65px;
+		line-height: 110%;
+		text-transform: capitalize;
+		color: $titleColor;
+		font-weight: 400;
+		margin-bottom: 0.75em;
+		margin-top: 0;
+   
+		@media (max-width: $md3+px) {
+			font-size: 59px;
+		}
+   
+		@media (max-width: 575px) {
+			font-size: 49px;
+		}
+	}
+	& h3 {
+		font-family: $seconFontFamily;
+		font-weight: 400;
+		font-size: 48px;
+		line-height: 110%;
+		text-transform: capitalize;
+		color: $titleColor;
+		margin-bottom: 0.75em;
+		margin-top: 0;
+	
+		@media (max-width: $md3+px) {
+			font-size: 42px;
+		}
+	
+		@media (max-width: 575px) {
+			font-size: 32px;
+		}
+	}
 	& h4 {
 		font-family: $seconFontFamily;
 		font-weight: 400;
@@ -487,7 +636,16 @@ button.btn-default {
 			font-size: 20px;
 		}
 	}
-	& h6 {}
+	& h6 {
+		font-family: $seconFontFamily;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 120%;
+		text-transform: capitalize;
+		color: $titleColor;
+		margin-bottom: 0.75em;
+		margin-top: 0;
+	}
 
 	& p {
 		font-size: 16px;
@@ -504,9 +662,58 @@ button.btn-default {
 		}
 	}
 
-	& ul {}
+	& ul {
+		margin: 30px 0 0;
+		& > li {
+			padding-left: 59px;
+			margin-bottom: 15px;
+			position: relative;
 
-	& ol {}
+			font-size: 16px;
+			line-height: 170%;
+			color: $textColor;
+
+			@media (max-width: 575px) {
+				padding-left: 30px;
+				font-size: 14px;
+				&:before {
+					left: 5px;
+				}
+			}
+
+			&:before {
+				position: absolute;
+				content: '';
+				top: 5px;
+				left: 30px;
+				width: 14px;
+				height: 15px;
+				background: url(../img/icons/check.svg) center no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+
+	& ol {
+		margin: 30px 0 0;
+		& > li {
+			margin-left: 49px;
+			padding-left: 10px;
+			//padding-left: 59px;
+			margin-bottom: 15px;
+			position: relative;
+
+			font-size: 16px;
+			line-height: 170%;
+			color: $textColor;
+
+			@media (max-width: 575px) {
+				margin-left: 19px;
+				//padding-left: 30px;
+				font-size: 14px;
+			}
+		}
+	}
 
 	& figure {
 		margin: 50px 0 50px;
@@ -542,6 +749,36 @@ button.btn-default {
 
 }
 // === and TEXT CONTETN BLOCK ========================================================================
+
+// === block-column-2 ========================================================================
+.block-column-2 {
+    display: flex;
+
+    @media (max-width: $md2+px) {
+        display: block;
+    }
+}
+.column-1 {
+    flex: 1 1 auto;
+    margin-right: 60px;
+
+    @media (max-width: $md2+px) {
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+}
+.column-2 {
+    flex: 0 0 329px;
+    padding-left: 49px;
+    border-left: 1px solid rgba($titleColor, 0.1);
+    @media (max-width: $md2+px) {
+       padding-left: 0;
+       border: none;
+    }
+}
+
+
+// === and block-column-2K ========================================================================
 
 
 // === BLOCK COLUMN 3 ========================================================================
@@ -623,6 +860,26 @@ button.btn-default {
 	// ==== CHECKOUT  =====================================================
 	@import "#checkout";
 	// ==== AND CHECKOUT  =====================================================
+	
+	// ==== AND CHECKOUT  =====================================================
+	@import "#wishlist";
+	// ==== AND CHECKOUT  =====================================================
+	
+	// ==== PROFILE  =====================================================
+	@import "#profile";
+	// ==== AND PROFILE  =====================================================
+	
+	// ==== LOG IN  =====================================================
+	@import "#log-in";
+	// ==== AND LOG IN  =====================================================
+	
+	// ==== REGISTRATION  =====================================================
+	@import "#registr";
+	// ==== AND REGISTRATION  =====================================================
+	
+	// ==== PAGE 404 =====================================================
+	@import "#page404";
+	// ==== AND PAGE 404  =====================================================
 
 // ==== AND PAGES =====================================================
 

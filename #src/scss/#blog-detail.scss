@@ -434,7 +434,7 @@
         font-size: 14px;
         line-height: 170%;
         text-transform: uppercase;
-        color: $titleColor;
+        color: $titleColor !important;
         margin-left: 47px;
 
         @media (min-width: 992px) {
