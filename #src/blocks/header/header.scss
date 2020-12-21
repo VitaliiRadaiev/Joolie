@@ -120,7 +120,9 @@
 			width: 100%;
 			background: #fff;
 			padding-bottom: 20px;
-			box-shadow: 0 5px 20px -5px rgba(#000, 0.2)
+			box-shadow: 0 5px 20px -5px rgba(#000, 0.2);
+			max-height: calc(100vh - 130px);
+			overflow: auto;
 		}
 	}
 	&__menu-list {
