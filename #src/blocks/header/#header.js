@@ -22,7 +22,9 @@
 			if(document.documentElement.clientWidth < 992) {
 				navMenu.classList.add('_spollers', '_one');
 				navMenu.querySelectorAll('.header__menu-link').forEach(link => {
-					link.classList.add('_spoller');
+					if(link.nextElementSibling) {
+						link.classList.add('_spoller');
+					}
 				})
 			}
 		}

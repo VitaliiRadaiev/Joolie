@@ -1,6 +1,14 @@
 .checkout {
 
     &_2 {
+        & .checkout__content {
+            margin-bottom: 146px;
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 70px;
+            }
+        }
+
         @media (max-width: $md3+px) {
             & .checkout__decor {
                 display: none;
@@ -16,6 +24,10 @@
             @media (max-width: $md2+px) {
                 margin-bottom: 40px;
             }
+        }
+
+        & .head__text.text-content p {
+            margin-bottom: 1.9em;
         }
     }
 

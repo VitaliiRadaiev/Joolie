@@ -9,8 +9,7 @@
 
     &__content-decor {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 250px;
         right: 10px;
         width: 229px;
         height: 544px;
@@ -47,7 +46,6 @@
 
     &__decor {
         position: relative;
-
         &:before {
             position: absolute;
             content: '';
@@ -111,5 +109,24 @@
                 background: rgba(#000, 0.1);
             }
         }
+    }
+}
+
+
+.test {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1000px;
+
+    & > li {
+        margin-bottom: 40px;
+    }
+    &__collapse {
+        display: none;
+        padding: 40px 15px 30px;
+    }
+
+    & h2 {
+        cursor: pointer;
     }
 }

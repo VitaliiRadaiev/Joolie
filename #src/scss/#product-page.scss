@@ -113,7 +113,6 @@
 
     &__rating {
         flex: 0 0 auto;
-        align-self: flex-end;
     }
 
     &__size {
@@ -257,8 +256,7 @@
 
     @media (max-width: $md2+px) {
       max-width: 652px;
-      margin-left: auto;
-      margin-right: auto;
+
     }
 
     @media (max-width: 575px) {

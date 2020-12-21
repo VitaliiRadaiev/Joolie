@@ -15,6 +15,7 @@ if(priceSlider) {
 		tooltips:[wNumb({decimals: 0, thousand: ','}) , wNumb({decimals: 0, thousand: ','})], 
 		range: {
 			'min': [+min],
+			'30%': [2000,100],
 			'max': [+max],
 		}
 	});

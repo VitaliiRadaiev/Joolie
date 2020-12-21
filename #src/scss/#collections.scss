@@ -40,7 +40,6 @@
             padding: 0 15px;
             margin-bottom: 30px;
             flex: 0 1 50%;
-
             @media (max-width: 575px) {
                 margin-bottom: 15px;
             }
@@ -52,6 +51,7 @@
                     transform: translateY(0%);
                 }
             }
+
         }
 
         & .card-timer {

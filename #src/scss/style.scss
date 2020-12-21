@@ -380,7 +380,7 @@ main.page {
 		&:hover {
 			border-left: 2px solid $titleColor;
 			border-right: 2px solid $titleColor;
-			background: rgba(#000, 0.1);
+			background: rgba($mainColor, 0.1);
 
 
 			&:before {
@@ -437,6 +437,7 @@ button.btn-default {
 	align-items: center;
 	border-bottom: 1px solid rgba($textColor, 0.2);
 	width: 100%;
+	background: transparent;
 
 	&:focus {
 		border-bottom: 1px solid rgba($textColor, 0.8);
@@ -716,10 +717,10 @@ button.btn-default {
 	}
 
 	& figure {
-		margin: 50px 0 50px;
+		margin: 25px 0 50px;
 
 		@media (max-width: $md4+px) {
-			margin: 30px 0 30px;
+			margin: 15px 0 30px;
 		}
 
 		& img {

@@ -18,9 +18,7 @@
                     height: 400px;
                     margin-bottom: 50px;
 
-                    @media (max-width: $md2+px) {
-                        margin: 0 auto;
-                    }
+                   
 
                     &__body {
                         padding: 40px 20px 30px 30px;

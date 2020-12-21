@@ -13,12 +13,6 @@
                 flex: 0 0 430px;
                 padding-left: 0;
                 border: none;
-
-                & .card-timer {
-                  @media (max-width: $md2+px) {
-                      margin: 0 auto;
-                  }
-                }
             }
         }
     }

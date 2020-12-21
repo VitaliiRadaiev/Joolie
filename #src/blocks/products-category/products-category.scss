@@ -1,5 +1,9 @@
 .products-category {
-	margin: 40px 0 100px;
+	margin: 40px 0 20px;
+
+	@media (max-width: $md2+px) {
+		margin: 40px 0 100px;
+	}
 
 	@media (max-width: $md3+px) {
 		margin-bottom: 50px;
@@ -16,12 +20,15 @@
 	}
 
 	&__list {
-		padding-bottom: 100px;
+		padding-bottom: 180px;
 		min-width: 0;
+
+		@media (max-width: $md2+px) {
+			padding-bottom: 20px;
+		}
 
 		@media (max-width: $md3+px) {
 			max-width: 600px;
-			padding-bottom: 20px;
 		}
 
 		& .swiper-wrapper {
