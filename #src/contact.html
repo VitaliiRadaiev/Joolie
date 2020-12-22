@@ -13,12 +13,15 @@
 
 		<!-- == PAGE CONTENT ================== -->
 		<main class="page">
+            <!-- == HERO ================== -->
 			@@include('blocks/hero/_hero.html',{
 			"title": 'Contact us',
 			"breadcrumb": ['Home'],
 			"breadcrumbLast": 'Contact us',
             })
-            
+            <!-- == // HERO ================== -->
+
+            <!-- == ADVANTAGES ================== -->
             @@include('blocks/advantages/_advantages.html',{
                 "data": [
                 {
@@ -43,7 +46,9 @@
                 },
             ]
             })
+            <!-- == // ADVANTAGES ================== -->
 
+            <!-- == FORM BLOCK CONTACT ================== -->
             <section class="contact__form-block form-block-contact">
                 <div class="container">
                     <div class="form-block-contact__body">
@@ -62,10 +67,13 @@
                     </div>
                 </div>
             </section>
+            <!-- == // FORM BLOCK CONTACT ================== -->
 
+            <!-- == MAP ================== -->
             <section class="contact__map">
                 <div id="map"></div>
             </section>
+            <!-- == // MAP ================== -->
 
 		</main>
 		<!-- == // PAGE CONTENT ================== -->

@@ -12,12 +12,15 @@
 
 			<!-- == PAGE CONTENT ================== -->
 			<main class="page">
+                <!-- == HERO ================== -->
 				@@include('blocks/hero/_hero.html',{
 					"title": 'Cart',
 					"breadcrumb": ['Home'], 
 					"breadcrumbLast": 'Cart',
                 })
-                
+                <!-- == // HERO ================== -->
+
+                <!-- == CART CONTENT ================== -->
                 <section class="cart__content">
                     <form action="checkout-1.html" class="container">
                         <div class="block-column-2">
@@ -177,9 +180,12 @@
                         </div>
                     </form>
                 </section>
-				
+                <!-- == // CART CONTENT ================== -->
 
-				@@include('blocks/instagram-block/_instagram-block.html',{})
+                <!-- == INSTAGRAM BLOCK ================== -->
+                @@include('blocks/instagram-block/_instagram-block.html',{})
+                <!-- == // INSTAGRAM BLOCK ================== -->
+                
 			</main>
 			<!-- == // PAGE CONTENT ================== -->
 

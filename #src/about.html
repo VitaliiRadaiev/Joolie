@@ -12,12 +12,15 @@
 
 			<!-- == PAGE CONTENT ================== -->
 			<main class="page">
+				<!-- == HERO ================== -->
 				@@include('blocks/hero/_hero.html',{
 					"title": 'About',
 					"breadcrumb": ['Home'], 
 					"breadcrumbLast": 'About',
 				})
-				
+				<!-- == // HERO ================== -->
+
+				<!-- == TEXT BLOCK ABOUT ================== -->
 				<section class="about__text-block text-block-about">
 					<div class="text-block-about__body container">
 						<div class="text-block-about__column text-block-about__column_1 text-content">
@@ -77,9 +80,13 @@
 						</div>
 					</div>
 				</section>
+				<!-- == // TEXT BLOCK ABOUT ================== -->
 
+				<!-- == VIDEO BLOCK ================== -->
 				@@include('blocks/video-block/_video-block.html',{})
-				
+				<!-- == // VIDEO BLOCK ================== -->
+
+				<!-- == ADVANTAGES ================== -->
 				@@include('blocks/advantages/_advantages.html',{
 					"data": [
                     {
@@ -104,10 +111,15 @@
                     },
                 ]
 				})
+				<!-- == // ADVANTAGES ================== -->
 
+				<!-- == INSTAGRAM BLOCK ================== -->
 				@@include('blocks/instagram-block/_instagram-block.html',{})
+				<!-- == // INSTAGRAM BLOCK ================== -->
 
+				<!-- == LOGOS BLOCK ================== -->
 				@@include('blocks/logos-block/_logos-block.html',{})
+				<!-- == // LOGOS BLOCK ================== -->
 			</main>
 			<!-- == // PAGE CONTENT ================== -->
 

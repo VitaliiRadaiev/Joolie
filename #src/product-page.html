@@ -13,12 +13,16 @@
 
         <!-- == PAGE CONTENT ================== -->
         <main class="page">
+
+            <!-- == HERO ================== -->
             @@include('blocks/hero/_hero.html',{
             "title": 'Shop',
             "breadcrumb": ['Home','Shop'],
             "breadcrumbLast": 'Wedding dress with a neckline from "Joolie"',
             })
+            <!-- == // HERO ================== -->
 
+            <!-- == PRODUCT PAGE CONTENT ================== -->
             <section class="product-page__content _parallax">
                 <div class="product-page__decor layer" data-depth="0.15">
                     <img src="img/photo/decor.png" alt="flowers">
@@ -308,7 +312,9 @@
                     </div>
                 </div>
             </section>
+            <!-- == // PRODUCT PAGE CONTENT ================== -->
 
+            <!-- == YOU VIEWED ================== -->
             <section class="you-viewed _parallax">
                 <div class="you-viewed__decor_1 layer" data-depth="0.15">
                     <img src="img/photo/decor5.png" alt="flowers">
@@ -380,6 +386,8 @@
                     @@include('blocks/pagination/_pagination.html', {})
                 </div>
             </section>
+            <!-- == // YOU VIEWED ================== -->
+
         </main>
         <!-- == // PAGE CONTENT ================== -->
 
